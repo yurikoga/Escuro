@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #091921; /* Fundo escuro conforme a imagem */
+}
+
+.menu-container {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.icon-item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #091921;
+    /* Sombras externas para o efeito 3D */
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5),
+                -10px -10px 20px rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.icon-item a {
+    font-size: 2em;
+    color: #555; /* Cor padrão desativada */
+    transition: 0.5s;
+}
+
+/* Efeito de "Clique" ou Ativo */
+.icon-item.active {
+    box-shadow: inset 10px 10px 20px rgba(0,0,0,0.5),
+                inset -10px -10px 20px rgba(255,255,255,0.05);
+}
+
+/* Ajuste das cores dos ícones no hover */
+.icon-item:hover a {
+    transform: scale(1.1);
+    /* A cor será injetada via JavaScript */
+}
